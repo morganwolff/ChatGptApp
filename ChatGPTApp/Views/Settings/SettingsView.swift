@@ -10,7 +10,7 @@ import SwiftUI
 struct SettingsView: View {
     @State private var showingCredits = false
     var body: some View {
-        Text("Settings")
+        Text("settings.page.title")
     }
 }
 
