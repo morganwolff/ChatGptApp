@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  ChatGPTApp
+
+  Created by Morgan Wolff on 23/05/2023.
+  
+*/
+
+// MARK: - Settings Page
+"settings.page.title" = "Paramètres";
+
+// MARK: - Conversation Page
+"chats.page.title" = "Conversations";
