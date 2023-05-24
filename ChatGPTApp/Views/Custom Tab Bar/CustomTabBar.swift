@@ -14,7 +14,6 @@ struct CustomTabBar: View {
     var body: some View {
         HStack {
             Button {
-                print("Here")
                 selectedTab = .chats
                 isChatViewActive = true
             } label: {
