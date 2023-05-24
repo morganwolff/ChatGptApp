@@ -34,9 +34,9 @@ struct ProfileView: View {
               }
             }
           }
-          Section("General") {
+          Section("profile.page.general.section.title".localize()) {
             HStack {
-              SettingsRowView(imageName: "gear", title: "Version", tintColor: Color(.systemGray))
+              SettingsRowView(imageName: "gear", title: "profile.page.general.version".localize(), tintColor: Color(.systemGray))
               Spacer()
               Text(UIApplication.appVersion ?? "N/A")
                 .font(.subheadline)
@@ -46,7 +46,7 @@ struct ProfileView: View {
               print("Langue")
             } label: {
               HStack {
-                SettingsRowView(imageName: "text.bubble", title: "Language", tintColor: Color(.systemGray))
+                SettingsRowView(imageName: "text.bubble", title: "profile.page.general.language".localize(), tintColor: Color(.systemGray))
                 Spacer()
                 Image(systemName: "line.3.horizontal")
                   .foregroundColor(.gray)
@@ -55,17 +55,17 @@ struct ProfileView: View {
             }
             
           }
-          Section("Account") {
+          Section("profile.page.account.section.title".localize()) {
             Button {
               viewModel.signOut()
             } label: {
-              SettingsRowView(imageName: "arrow.left.circle.fill", title: "Sign out", tintColor: .red)
+              SettingsRowView(imageName: "arrow.left.circle.fill", title: "profile.page.account.signout".localize(), tintColor: .red)
             }
             
             Button {
               print("delete account")
             } label: {
-              SettingsRowView(imageName: "xmark.circle.fill", title: "Delete Account", tintColor: .red)
+              SettingsRowView(imageName: "xmark.circle.fill", title: "profile.page.account.deleteaccount".localize(), tintColor: .red)
             }
           }
         }

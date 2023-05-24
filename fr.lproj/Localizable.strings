@@ -6,9 +6,6 @@
   
 */
 
-// MARK: - Settings Page
-"settings.page.title" = "Paramètres";
-
 // MARK: - Conversation Page
 "chats.page.title" = "Conversations";
 

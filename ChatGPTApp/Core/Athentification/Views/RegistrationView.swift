@@ -26,24 +26,24 @@ struct RegistrationView: View {
         
         VStack (spacing: 24){
           InputView(text: $email,
-                    title: "Email Adress",
-                    placeholder: "name@example.com")
+                    title: "signup.page.email.title".localize(),
+                    placeholder: "signup.page.email.placeholder".localize())
             .autocapitalization(.none)
           
           InputView(text: $fullname,
-                    title: "Full Name",
-                    placeholder: "Enter your name")
+                    title: "signup.page.fullname.title".localize(),
+                    placeholder: "signup.page.fullname.placeholder".localize())
           
           InputView(text: $password,
-                    title: "Password",
-                    placeholder: "Enter your password",
+                    title: "signup.page.password.title".localize(),
+                    placeholder: "signup.page.pasword.placeholder".localize(),
                     isSecureField: true)
             .autocapitalization(.none)
           
           ZStack (alignment: .trailing){
             InputView(text: $confirmpassword,
-                      title: "Confirm Password",
-                      placeholder: "Confirm your password",
+                      title: "signup.page.confirmpassword.title".localize(),
+                      placeholder: "signup.page.confirmpassword.placeholder".localize(),
                       isSecureField: true)
               .autocapitalization(.none)
             if !password.isEmpty && !confirmpassword.isEmpty {
@@ -71,7 +71,7 @@ struct RegistrationView: View {
           }
         } label: {
           HStack {
-            Text("SIGN UP")
+            Text("signup.page.signin.button".localize())
               .fontWeight(.semibold)
             Image(systemName: "arrow.right")
           }
@@ -90,8 +90,8 @@ struct RegistrationView: View {
           dismiss()
         } label: {
           HStack (spacing: 3){
-            Text("Already have an account?")
-            Text("Sign in")
+            Text("signup.page.signup.button.text1".localize())
+            Text("signup.page.signup.button.text2".localize())
               .fontWeight(.bold)
           }
           .font(.system(size: 14))

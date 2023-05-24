@@ -9,11 +9,11 @@ import SwiftUI
 
 enum Tabs{
     case chats
-    case settings
+    case profile
 }
 
 struct ContentView: View {
-  @State var selectedTab: Tabs = .settings
+  @State var selectedTab: Tabs = .profile
   @EnvironmentObject var viewModel: AuthViewModel
   
     var body: some View {
@@ -25,7 +25,7 @@ struct ContentView: View {
               NavigationStack {
                 ChatView()
               }
-            case .settings:
+            case .profile:
               NavigationStack {
                 ProfileView()
               }
@@ -39,26 +39,6 @@ struct ContentView: View {
       }
     }
 }
-
-//struct ContentView: View {
-//    @State var selectedTab: Tabs = .chats
-//    var body: some View {
-//        VStack {
-//            switch selectedTab {
-//            case .chats:
-//                NavigationStack {
-//                    ChatView()
-//                }
-//            case .settings:
-//                NavigationStack {
-//                  SettingsView()
-//                }
-//            }
-//            //Spacer()
-//            CustomTabBar(selectedTab: $selectedTab)
-//        }
-//    }
-//}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

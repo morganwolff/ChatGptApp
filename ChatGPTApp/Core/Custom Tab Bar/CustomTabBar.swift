@@ -10,7 +10,7 @@ import SwiftUI
 struct CustomTabBar: View {
     @Binding var selectedTab: Tabs
     @State var isChatViewActive: Bool = false
-    @State var isSettingsViewActive: Bool = false
+    @State var isProfileViewActive: Bool = false
     var body: some View {
         HStack {
             Button {
@@ -35,10 +35,10 @@ struct CustomTabBar: View {
             }
             
             Button {
-                selectedTab = .settings
-                isSettingsViewActive = true
+                selectedTab = .profile
+                isProfileViewActive = true
             } label: {
-                TabBarButton(buttonText: "Settings", imageName: "gearshape", isActive: selectedTab == .settings)
+                TabBarButton(buttonText: "Profile", imageName: "gearshape", isActive: selectedTab == .profile)
             }
             .foregroundColor(Color(red: 100 / 255, green: 116 / 255, blue: 139 / 255))
         }

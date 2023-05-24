@@ -27,6 +27,7 @@
 		DAA6E9712A1E05D6002EC1A4 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DAA6E9702A1E05D6002EC1A4 /* FirebaseFirestoreSwift */; };
 		DAA6E9732A1E05D6002EC1A4 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = DAA6E9722A1E05D6002EC1A4 /* FirebaseStorage */; };
 		DAA6E9772A1E0649002EC1A4 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA6E9762A1E0649002EC1A4 /* AuthViewModel.swift */; };
+		DAA6E97B2A1E8625002EC1A4 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA6E97A2A1E8625002EC1A4 /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		DAA6E9672A1DF677002EC1A4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DAA6E9692A1E04B9002EC1A4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		DAA6E9762A1E0649002EC1A4 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		DAA6E97A2A1E8625002EC1A4 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,12 +123,11 @@
 			isa = PBXGroup;
 			children = (
 				DAA6E9692A1E04B9002EC1A4 /* GoogleService-Info.plist */,
-				DAA6E95E2A1CF492002EC1A4 /* Components */,
+				DAA6E9792A1E85C6002EC1A4 /* Extensions */,
 				DAA6E9572A1CEEE3002EC1A4 /* App */,
+				DAA6E95E2A1CF492002EC1A4 /* Components */,
 				DAA6E9582A1CEF3D002EC1A4 /* Core */,
-				DA8EF17829DEBF920068D318 /* Views */,
 				DA8EF17A29DEBFA80068D318 /* Model */,
-				DA8EF17929DEBF9B0068D318 /* ViewModels */,
 				DA8EF15229DEBF240068D318 /* Assets.xcassets */,
 				DA8EF15429DEBF240068D318 /* Preview Content */,
 			);
@@ -141,22 +142,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		DA8EF17829DEBF920068D318 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				DA8EF18129DED1C40068D318 /* Chats */,
-				DA8EF17C29DEC02B0068D318 /* Custom Tab Bar */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		DA8EF17929DEBF9B0068D318 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		DA8EF17A29DEBFA80068D318 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +153,7 @@
 		DA8EF17C29DEC02B0068D318 /* Custom Tab Bar */ = {
 			isa = PBXGroup;
 			children = (
+				DAA6E9782A1E7F1D002EC1A4 /* Views */,
 				DA8EF17D29DEC0720068D318 /* CustomTabBar.swift */,
 				DA8EF17F29DECB680068D318 /* TabBarButton.swift */,
 			);
@@ -194,6 +180,8 @@
 			isa = PBXGroup;
 			children = (
 				DAA6E95B2A1CF05A002EC1A4 /* Athentification */,
+				DA8EF18129DED1C40068D318 /* Chats */,
+				DA8EF17C29DEC02B0068D318 /* Custom Tab Bar */,
 				DAA6E95A2A1CEFAB002EC1A4 /* Profile */,
 				DAA6E9592A1CEF46002EC1A4 /* Root */,
 			);
@@ -249,6 +237,21 @@
 				DAA6E9762A1E0649002EC1A4 /* AuthViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DAA6E9782A1E7F1D002EC1A4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DAA6E9792A1E85C6002EC1A4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DAA6E97A2A1E8625002EC1A4 /* String.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA8EF15129DEBF220068D318 /* ContentView.swift in Sources */,
+				DAA6E97B2A1E8625002EC1A4 /* String.swift in Sources */,
 				DAA6E95D2A1CF080002EC1A4 /* LoginView.swift in Sources */,
 				DAA6E9642A1D078B002EC1A4 /* ProfileView.swift in Sources */,
 				DA8EF18029DECB680068D318 /* TabBarButton.swift in Sources */,
