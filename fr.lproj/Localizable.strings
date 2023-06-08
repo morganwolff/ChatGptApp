@@ -1,0 +1,40 @@
+/* 
+  Localizable.strings
+  ChatGPTApp
+
+  Created by Morgan Wolff on 23/05/2023.
+  
+*/
+
+// MARK: - Conversation Page
+"chats.page.title" = "Conversations";
+
+// MARK: - SingIn Page
+"signin.page.email.title" = "Adresse Email";
+"signin.page.email.placeholder" = "nom@exemple.com";
+"signin.page.password.title" = "Mot de pass";
+"signin.page.pasword.placeholder" = "Entrez votre mot de pass";
+"signin.page.signin.button" = "Se Connecter";
+"signin.page.signup.button.text1" = "Vous n'avez pas de compte?";
+"signin.page.signup.button.text2"= "S'enregistrer";
+
+// MARK: - SingUp Page
+"signup.page.email.title" = "Adresse Email";
+"signup.page.email.placeholder" = "nom@exemple.com";
+"signup.page.fullname.title" = "Nom Complet";
+"signup.page.fullname.placeholder" = "Entrez votre nom";
+"signup.page.password.title" = "Mot de pass";
+"signup.page.pasword.placeholder" = "Entrez votre mot de pass";
+"signup.page.confirmpassword.title" = "Confirmer le Mot de Pass";
+"signup.page.confirmpassword.placeholder" = "Confirmez votre mot de pass";
+"signup.page.signin.button" = "S'enregister";
+"signup.page.signup.button.text1" = "Vous avez déjà un compte?";
+"signup.page.signup.button.text2"= "Se Connecter";
+
+// MARK: - Profile Page
+"profile.page.general.section.title" = "Générale";
+"profile.page.general.version" = "Version";
+"profile.page.general.language" = "Langage";
+"profile.page.account.section.title" = "Compte";
+"profile.page.account.signout" = "Se Déconnecter";
+"profile.page.account.deleteaccount" = "Supprimer le Compte";

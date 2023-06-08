@@ -8,16 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		DA8EF14F29DEBF220068D318 /* ChatGPTAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8EF14E29DEBF220068D318 /* ChatGPTAppApp.swift */; };
-		DA8EF15129DEBF220068D318 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8EF15029DEBF220068D318 /* RootView.swift */; };
+		DA8EF15129DEBF220068D318 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8EF15029DEBF220068D318 /* ContentView.swift */; };
 		DA8EF15329DEBF240068D318 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA8EF15229DEBF240068D318 /* Assets.xcassets */; };
 		DA8EF15629DEBF240068D318 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA8EF15529DEBF240068D318 /* Preview Assets.xcassets */; };
-		DA8EF16029DEBF240068D318 /* ChatGPTAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8EF15F29DEBF240068D318 /* ChatGPTAppTests.swift */; };
-		DA8EF16A29DEBF240068D318 /* ChatGPTAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8EF16929DEBF240068D318 /* ChatGPTAppUITests.swift */; };
-		DA8EF16C29DEBF240068D318 /* ChatGPTAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8EF16B29DEBF240068D318 /* ChatGPTAppUITestsLaunchTests.swift */; };
 		DA8EF17E29DEC0720068D318 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8EF17D29DEC0720068D318 /* CustomTabBar.swift */; };
 		DA8EF18029DECB680068D318 /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8EF17F29DECB680068D318 /* TabBarButton.swift */; };
 		DA8EF18329DEE6790068D318 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8EF18229DEE6790068D318 /* ChatView.swift */; };
-		DA8EF18529DEEDB50068D318 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8EF18429DEEDB50068D318 /* SettingsView.swift */; };
+		DAA6E9532A1CE659002EC1A4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAA6E9552A1CE659002EC1A4 /* Localizable.strings */; };
+		DAA6E95D2A1CF080002EC1A4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA6E95C2A1CF080002EC1A4 /* LoginView.swift */; };
+		DAA6E9602A1CF4A4002EC1A4 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA6E95F2A1CF4A4002EC1A4 /* InputView.swift */; };
+		DAA6E9622A1D0484002EC1A4 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA6E9612A1D0484002EC1A4 /* RegistrationView.swift */; };
+		DAA6E9642A1D078B002EC1A4 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA6E9632A1D078B002EC1A4 /* ProfileView.swift */; };
+		DAA6E9662A1D365A002EC1A4 /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA6E9652A1D365A002EC1A4 /* SettingsRowView.swift */; };
+		DAA6E9682A1DF677002EC1A4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA6E9672A1DF677002EC1A4 /* User.swift */; };
+		DAA6E96A2A1E04B9002EC1A4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAA6E9692A1E04B9002EC1A4 /* GoogleService-Info.plist */; };
+		DAA6E96D2A1E05D6002EC1A4 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DAA6E96C2A1E05D6002EC1A4 /* FirebaseAuth */; };
+		DAA6E96F2A1E05D6002EC1A4 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DAA6E96E2A1E05D6002EC1A4 /* FirebaseFirestore */; };
+		DAA6E9712A1E05D6002EC1A4 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DAA6E9702A1E05D6002EC1A4 /* FirebaseFirestoreSwift */; };
+		DAA6E9732A1E05D6002EC1A4 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = DAA6E9722A1E05D6002EC1A4 /* FirebaseStorage */; };
+		DAA6E9772A1E0649002EC1A4 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA6E9762A1E0649002EC1A4 /* AuthViewModel.swift */; };
+		DAA6E97B2A1E8625002EC1A4 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA6E97A2A1E8625002EC1A4 /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,18 +50,25 @@
 /* Begin PBXFileReference section */
 		DA8EF14B29DEBF220068D318 /* ChatGPTApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatGPTApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8EF14E29DEBF220068D318 /* ChatGPTAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTAppApp.swift; sourceTree = "<group>"; };
-		DA8EF15029DEBF220068D318 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		DA8EF15029DEBF220068D318 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DA8EF15229DEBF240068D318 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA8EF15529DEBF240068D318 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DA8EF15B29DEBF240068D318 /* ChatGPTAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatGPTAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA8EF15F29DEBF240068D318 /* ChatGPTAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTAppTests.swift; sourceTree = "<group>"; };
 		DA8EF16529DEBF240068D318 /* ChatGPTAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatGPTAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA8EF16929DEBF240068D318 /* ChatGPTAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTAppUITests.swift; sourceTree = "<group>"; };
-		DA8EF16B29DEBF240068D318 /* ChatGPTAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DA8EF17D29DEC0720068D318 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		DA8EF17F29DECB680068D318 /* TabBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarButton.swift; sourceTree = "<group>"; };
 		DA8EF18229DEE6790068D318 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
-		DA8EF18429DEEDB50068D318 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		DAA6E9542A1CE659002EC1A4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DAA6E9562A1CE6C1002EC1A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DAA6E95C2A1CF080002EC1A4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		DAA6E95F2A1CF4A4002EC1A4 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
+		DAA6E9612A1D0484002EC1A4 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		DAA6E9632A1D078B002EC1A4 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		DAA6E9652A1D365A002EC1A4 /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
+		DAA6E9672A1DF677002EC1A4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DAA6E9692A1E04B9002EC1A4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		DAA6E9762A1E0649002EC1A4 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		DAA6E97A2A1E8625002EC1A4 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +76,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAA6E96D2A1E05D6002EC1A4 /* FirebaseAuth in Frameworks */,
+				DAA6E9732A1E05D6002EC1A4 /* FirebaseStorage in Frameworks */,
+				DAA6E96F2A1E05D6002EC1A4 /* FirebaseFirestore in Frameworks */,
+				DAA6E9712A1E05D6002EC1A4 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,9 +103,8 @@
 		DA8EF14229DEBF220068D318 = {
 			isa = PBXGroup;
 			children = (
+				DAA6E9552A1CE659002EC1A4 /* Localizable.strings */,
 				DA8EF14D29DEBF220068D318 /* ChatGPTApp */,
-				DA8EF15E29DEBF240068D318 /* ChatGPTAppTests */,
-				DA8EF16829DEBF240068D318 /* ChatGPTAppUITests */,
 				DA8EF14C29DEBF220068D318 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,11 +122,12 @@
 		DA8EF14D29DEBF220068D318 /* ChatGPTApp */ = {
 			isa = PBXGroup;
 			children = (
-				DA8EF14E29DEBF220068D318 /* ChatGPTAppApp.swift */,
-				DA8EF17829DEBF920068D318 /* Views */,
-				DA8EF17B29DEBFAD0068D318 /* Services */,
+				DAA6E9692A1E04B9002EC1A4 /* GoogleService-Info.plist */,
+				DAA6E9792A1E85C6002EC1A4 /* Extensions */,
+				DAA6E9572A1CEEE3002EC1A4 /* App */,
+				DAA6E95E2A1CF492002EC1A4 /* Components */,
+				DAA6E9582A1CEF3D002EC1A4 /* Core */,
 				DA8EF17A29DEBFA80068D318 /* Model */,
-				DA8EF17929DEBF9B0068D318 /* ViewModels */,
 				DA8EF15229DEBF240068D318 /* Assets.xcassets */,
 				DA8EF15429DEBF240068D318 /* Preview Content */,
 			);
@@ -121,58 +142,18 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		DA8EF15E29DEBF240068D318 /* ChatGPTAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				DA8EF15F29DEBF240068D318 /* ChatGPTAppTests.swift */,
-			);
-			path = ChatGPTAppTests;
-			sourceTree = "<group>";
-		};
-		DA8EF16829DEBF240068D318 /* ChatGPTAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				DA8EF16929DEBF240068D318 /* ChatGPTAppUITests.swift */,
-				DA8EF16B29DEBF240068D318 /* ChatGPTAppUITestsLaunchTests.swift */,
-			);
-			path = ChatGPTAppUITests;
-			sourceTree = "<group>";
-		};
-		DA8EF17829DEBF920068D318 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				DA8EF15029DEBF220068D318 /* RootView.swift */,
-				DA8EF18629DEEDB90068D318 /* Settings */,
-				DA8EF18129DED1C40068D318 /* Chats */,
-				DA8EF17C29DEC02B0068D318 /* Custom Tab Bar */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		DA8EF17929DEBF9B0068D318 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		DA8EF17A29DEBFA80068D318 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DAA6E9672A1DF677002EC1A4 /* User.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		DA8EF17B29DEBFAD0068D318 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		DA8EF17C29DEC02B0068D318 /* Custom Tab Bar */ = {
 			isa = PBXGroup;
 			children = (
+				DAA6E9782A1E7F1D002EC1A4 /* Views */,
 				DA8EF17D29DEC0720068D318 /* CustomTabBar.swift */,
 				DA8EF17F29DECB680068D318 /* TabBarButton.swift */,
 			);
@@ -187,12 +168,90 @@
 			path = Chats;
 			sourceTree = "<group>";
 		};
-		DA8EF18629DEEDB90068D318 /* Settings */ = {
+		DAA6E9572A1CEEE3002EC1A4 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				DA8EF18429DEEDB50068D318 /* SettingsView.swift */,
+				DA8EF14E29DEBF220068D318 /* ChatGPTAppApp.swift */,
 			);
-			path = Settings;
+			path = App;
+			sourceTree = "<group>";
+		};
+		DAA6E9582A1CEF3D002EC1A4 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				DAA6E95B2A1CF05A002EC1A4 /* Athentification */,
+				DA8EF18129DED1C40068D318 /* Chats */,
+				DA8EF17C29DEC02B0068D318 /* Custom Tab Bar */,
+				DAA6E95A2A1CEFAB002EC1A4 /* Profile */,
+				DAA6E9592A1CEF46002EC1A4 /* Root */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		DAA6E9592A1CEF46002EC1A4 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				DA8EF15029DEBF220068D318 /* ContentView.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		DAA6E95A2A1CEFAB002EC1A4 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				DAA6E9632A1D078B002EC1A4 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		DAA6E95B2A1CF05A002EC1A4 /* Athentification */ = {
+			isa = PBXGroup;
+			children = (
+				DAA6E9752A1E0626002EC1A4 /* ViewModels */,
+				DAA6E9742A1E0616002EC1A4 /* Views */,
+			);
+			path = Athentification;
+			sourceTree = "<group>";
+		};
+		DAA6E95E2A1CF492002EC1A4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				DAA6E95F2A1CF4A4002EC1A4 /* InputView.swift */,
+				DAA6E9652A1D365A002EC1A4 /* SettingsRowView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		DAA6E9742A1E0616002EC1A4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DAA6E9612A1D0484002EC1A4 /* RegistrationView.swift */,
+				DAA6E95C2A1CF080002EC1A4 /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DAA6E9752A1E0626002EC1A4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DAA6E9762A1E0649002EC1A4 /* AuthViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DAA6E9782A1E7F1D002EC1A4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DAA6E9792A1E85C6002EC1A4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DAA6E97A2A1E8625002EC1A4 /* String.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +270,12 @@
 			dependencies = (
 			);
 			name = ChatGPTApp;
+			packageProductDependencies = (
+				DAA6E96C2A1E05D6002EC1A4 /* FirebaseAuth */,
+				DAA6E96E2A1E05D6002EC1A4 /* FirebaseFirestore */,
+				DAA6E9702A1E05D6002EC1A4 /* FirebaseFirestoreSwift */,
+				DAA6E9722A1E05D6002EC1A4 /* FirebaseStorage */,
+			);
 			productName = ChatGPTApp;
 			productReference = DA8EF14B29DEBF220068D318 /* ChatGPTApp.app */;
 			productType = "com.apple.product-type.application";
@@ -281,8 +346,12 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = DA8EF14229DEBF220068D318;
+			packageReferences = (
+				DAA6E96B2A1E05D6002EC1A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = DA8EF14C29DEBF220068D318 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -300,6 +369,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA8EF15629DEBF240068D318 /* Preview Assets.xcassets in Resources */,
+				DAA6E96A2A1E04B9002EC1A4 /* GoogleService-Info.plist in Resources */,
+				DAA6E9532A1CE659002EC1A4 /* Localizable.strings in Resources */,
 				DA8EF15329DEBF240068D318 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,11 +396,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA8EF15129DEBF220068D318 /* RootView.swift in Sources */,
+				DA8EF15129DEBF220068D318 /* ContentView.swift in Sources */,
+				DAA6E97B2A1E8625002EC1A4 /* String.swift in Sources */,
+				DAA6E95D2A1CF080002EC1A4 /* LoginView.swift in Sources */,
+				DAA6E9642A1D078B002EC1A4 /* ProfileView.swift in Sources */,
 				DA8EF18029DECB680068D318 /* TabBarButton.swift in Sources */,
+				DAA6E9622A1D0484002EC1A4 /* RegistrationView.swift in Sources */,
 				DA8EF18329DEE6790068D318 /* ChatView.swift in Sources */,
-				DA8EF18529DEEDB50068D318 /* SettingsView.swift in Sources */,
+				DAA6E9662A1D365A002EC1A4 /* SettingsRowView.swift in Sources */,
+				DAA6E9682A1DF677002EC1A4 /* User.swift in Sources */,
+				DAA6E9602A1CF4A4002EC1A4 /* InputView.swift in Sources */,
 				DA8EF17E29DEC0720068D318 /* CustomTabBar.swift in Sources */,
+				DAA6E9772A1E0649002EC1A4 /* AuthViewModel.swift in Sources */,
 				DA8EF14F29DEBF220068D318 /* ChatGPTAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,7 +416,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA8EF16029DEBF240068D318 /* ChatGPTAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,8 +423,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA8EF16C29DEBF240068D318 /* ChatGPTAppUITestsLaunchTests.swift in Sources */,
-				DA8EF16A29DEBF240068D318 /* ChatGPTAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +440,18 @@
 			targetProxy = DA8EF16629DEBF240068D318 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DAA6E9552A1CE659002EC1A4 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAA6E9542A1CE659002EC1A4 /* fr */,
+				DAA6E9562A1CE6C1002EC1A4 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		DA8EF16D29DEBF240068D318 /* Debug */ = {
@@ -655,6 +742,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DAA6E96B2A1E05D6002EC1A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DAA6E96C2A1E05D6002EC1A4 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DAA6E96B2A1E05D6002EC1A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		DAA6E96E2A1E05D6002EC1A4 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DAA6E96B2A1E05D6002EC1A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		DAA6E9702A1E05D6002EC1A4 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DAA6E96B2A1E05D6002EC1A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		DAA6E9722A1E05D6002EC1A4 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DAA6E96B2A1E05D6002EC1A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DA8EF14329DEBF220068D318 /* Project object */;
 }

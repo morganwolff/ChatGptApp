@@ -1,0 +1,40 @@
+/* 
+  Localizable.strings
+  ChatGPTApp
+
+  Created by Morgan Wolff on 23/05/2023.
+  
+*/
+
+// MARK: - Conversation Page
+"chats.page.title" = "Chats";
+
+// MARK: - SingIn Page
+"signin.page.email.title" = "Email Adress";
+"signin.page.email.placeholder" = "name@example.com";
+"signin.page.password.title" = "Password";
+"signin.page.pasword.placeholder" = "Enter your password";
+"signin.page.signin.button" = "SIGN IN";
+"signin.page.signup.button.text1" = "Don't have an account?";
+"signin.page.signup.button.text2"= "Sign up";
+
+// MARK: - SingUp Page
+"signup.page.email.title" = "Email Adress";
+"signup.page.email.placeholder" = "name@example.com";
+"signup.page.fullname.title" = "Full Name";
+"signup.page.fullname.placeholder" = "Enter your name";
+"signup.page.password.title" = "Password";
+"signup.page.pasword.placeholder" = "Enter your password";
+"signup.page.confirmpassword.title" = "Confirm Password";
+"signup.page.confirmpassword.placeholder" = "Confirm your password";
+"signup.page.signin.button" = "SIGN UP";
+"signup.page.signup.button.text1" = "Already have an account?";
+"signup.page.signup.button.text2"= "Sign in";
+
+// MARK: - Profile Page
+"profile.page.general.section.title" = "General";
+"profile.page.general.version" = "Version";
+"profile.page.general.language" = "Language";
+"profile.page.account.section.title" = "Account";
+"profile.page.account.signout" = "Sign Out";
+"profile.page.account.deleteaccount" = "Delete Account";

@@ -6,12 +6,19 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct ChatGPTAppApp: App {
+  @StateObject var viewModel = AuthViewModel()
+  
+  init() {
+    FirebaseApp.configure()
+  }
     var body: some Scene {
         WindowGroup {
-            RootView()
+            ContentView()
+            .environmentObject(viewModel)
         }
     }
 }
