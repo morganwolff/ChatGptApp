@@ -9,8 +9,8 @@ import SwiftUI
 
 struct InputView: View {
   @Binding var text: String
-  let title: String
-  let placeholder: String
+  let title: LocalizedStringKey
+  let placeholder: LocalizedStringKey
   var isSecureField = false
   
   var body: some View {
@@ -29,11 +29,5 @@ struct InputView: View {
       Divider()
         .background(.black)
     }
-  }
-}
-
-struct InputView_Previews: PreviewProvider {
-  static var previews: some View {
-    InputView(text: .constant(""), title: "Email adress", placeholder: "name@example.com")
   }
 }

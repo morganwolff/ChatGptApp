@@ -17,6 +17,9 @@ protocol AuthentificationFormProtocol {
 class AuthViewModel: ObservableObject {
   @Published var userSession: FirebaseAuth.User?
   @Published var currentUser: User?
+  @Published var showErrorAlert = false
+  @Published var errorLogin: String?
+  @Published var errorRegister: String?
   
   init() {
     self.userSession = Auth.auth().currentUser
@@ -31,7 +34,8 @@ class AuthViewModel: ObservableObject {
       self.userSession = result.user
       await fetchUser()
     } catch {
-      print("DEBUG: Failed to login with error \(error.localizedDescription)")
+      self.errorLogin = error.localizedDescription
+      self.showErrorAlert = true
     }
   }
   
@@ -54,12 +58,46 @@ class AuthViewModel: ObservableObject {
       self.userSession = nil // wips out user session and takes us back to login screen
       self.currentUser = nil // wipes out currentuser data model
     } catch {
+      self.errorRegister = error.localizedDescription
+      self.showErrorAlert = true
       print("DEBUG: failed to sign out with error \(error.localizedDescription)")
     }
   }
   
   func deleteAccount() {
-
+    guard let uid = self.userSession?.uid else { return }
+    
+    self.userSession?.delete { [weak self] error in
+        if let error = error {
+            print("DEBUG: Failed to delete user account with error \(error.localizedDescription)")
+        } else {
+            // Delete user data from Firestore
+            Firestore.firestore().collection("users").document(uid).delete { error in
+                if let error = error {
+                    print("DEBUG: Failed to delete user data with error \(error.localizedDescription)")
+                } else {
+                    self?.userSession = nil
+                    self?.currentUser = nil
+                    print("User account and data deleted successfully.")
+                }
+            }
+        }
+    }
+  }
+  
+  func isUserRecentlyReauthenticated() -> Bool {
+      guard let user = Auth.auth().currentUser else {
+          return false
+      }
+      let lastSignInDate = user.metadata.lastSignInDate
+      let recentTimeThreshold: TimeInterval = 300 // 5 minutes
+      
+      if let lastSignInDate = lastSignInDate {
+          let timeSinceLastSignIn = Date().timeIntervalSince(lastSignInDate)
+          return timeSinceLastSignIn <= recentTimeThreshold
+      }
+      
+      return false
   }
   
   func fetchUser() async {

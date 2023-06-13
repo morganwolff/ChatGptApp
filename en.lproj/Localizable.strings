@@ -11,7 +11,7 @@
 
 // MARK: - SingIn Page
 "signin.page.email.title" = "Email Adress";
-"signin.page.email.placeholder" = "name@example.com";
+"signin.page.email.placeholder" = "Enter your email adress";
 "signin.page.password.title" = "Password";
 "signin.page.pasword.placeholder" = "Enter your password";
 "signin.page.signin.button" = "SIGN IN";
@@ -20,7 +20,7 @@
 
 // MARK: - SingUp Page
 "signup.page.email.title" = "Email Adress";
-"signup.page.email.placeholder" = "name@example.com";
+"signup.page.email.placeholder" = "Enter your email adress";
 "signup.page.fullname.title" = "Full Name";
 "signup.page.fullname.placeholder" = "Enter your name";
 "signup.page.password.title" = "Password";
@@ -37,4 +37,16 @@
 "profile.page.general.language" = "Language";
 "profile.page.account.section.title" = "Account";
 "profile.page.account.signout" = "Sign Out";
-"profile.page.account.deleteaccount" = "Delete Account";
+"profile.page.account.signout.alert.title" = "Confirmation";
+"profile.page.account.signout.alert.message" = "Do you really want to log out?";
+"profile.page.account.signout.alert.primaryButton" = "Signout";
+"profile.page.account.signout.alert.secondaryButton" = "Cancel";
+"profile.page.account.deleteaccount" = "Delete account";
+"profile.page.account.deleteaccount.alert.title" = "Confirmation";
+"profile.page.account.deleteaccount.alert.message" = "Do you really want to delete your account?";
+"profile.page.account.deleteaccount.alert.primaryButton" = "Delete your account";
+"profile.page.account.deleteaccount.alert.secondaryButton" = "Cancel";
+"profile.page.account.reauthentification.alert.title" = "Confirmation";
+"profile.page.account.reauthentification.alert.message" = "Deleting your account requires re-authentication.";
+"profile.page.account.reauthentification.alert.primaryButton" = "Reauthenticate";
+"profile.page.account.reauthentification.alert.secondaryButton" = "Cancel";
