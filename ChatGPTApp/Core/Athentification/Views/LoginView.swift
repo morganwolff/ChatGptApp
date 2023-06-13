@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginView: View {
   @State private var email = ""
   @State private var password =  ""
+  @State private var showAlert = false
   @EnvironmentObject var viewModel: AuthViewModel
   
   var body: some View {
@@ -24,9 +25,9 @@ struct LoginView: View {
         
         //form fields
         VStack(spacing: 24) {
-          InputView(text: $email, title: "signin.page.email.title".localize(), placeholder: "signin.page.email.placeholder".localize())
+          InputView(text: $email, title: LocalizedStringKey("signin.page.email.title"), placeholder: LocalizedStringKey("signin.page.email.placeholder"))
             .autocapitalization(.none)
-          InputView(text: $password, title: "signin.page.password.title".localize(), placeholder: "signin.page.pasword.placeholder".localize(), isSecureField: true)
+          InputView(text: $password, title: LocalizedStringKey("signin.page.password.title"), placeholder: LocalizedStringKey("signin.page.pasword.placeholder"), isSecureField: true)
         }
         .padding(.horizontal)
         .padding(.top, 12)
@@ -38,7 +39,7 @@ struct LoginView: View {
           }
         } label: {
           HStack {
-            Text("signin.page.signin.button".localize())
+            Text(LocalizedStringKey("signin.page.signin.button"))
               .fontWeight(.semibold)
             Image(systemName: "arrow.right")
           }
@@ -58,13 +59,25 @@ struct LoginView: View {
             .navigationBarBackButtonHidden(true)
         } label: {
           HStack (spacing: 3){
-            Text("signin.page.signup.button.text1".localize())
-            Text("signin.page.signup.button.text2".localize())
+            Text(LocalizedStringKey("signin.page.signup.button.text1"))
+            Text(LocalizedStringKey("signin.page.signup.button.text2"))
               .fontWeight(.bold)
           }
           .font(.system(size: 14))
         }
       }
+    }
+    .alert(isPresented: $showAlert) {
+        Alert(
+            title: Text("Error"),
+            message: Text(viewModel.errorLogin ?? ""),
+            dismissButton: .default(Text("OK")) {
+                // Handle alert dismissal if needed
+            }
+        )
+    }
+    .onChange(of: viewModel.showErrorAlert) { showErrorAlert in
+      showAlert = showErrorAlert
     }
   }
 }

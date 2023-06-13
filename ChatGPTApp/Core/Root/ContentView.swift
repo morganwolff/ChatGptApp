@@ -18,8 +18,8 @@ struct ContentView: View {
   
     var body: some View {
       Group {
-        if viewModel.userSession != nil {
-          VStack {
+        if (viewModel.userSession != nil) {
+          VStack (spacing: 0) {
             switch selectedTab {
             case .chats:
               NavigationStack {
@@ -30,7 +30,6 @@ struct ContentView: View {
                 ProfileView()
               }
             }
-            Spacer()
             CustomTabBar(selectedTab: $selectedTab)
           }
         } else {

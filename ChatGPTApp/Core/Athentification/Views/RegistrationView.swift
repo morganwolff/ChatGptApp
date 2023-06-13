@@ -15,90 +15,89 @@ struct RegistrationView: View {
   @Environment(\.dismiss) var dismiss
   @EnvironmentObject var viewModel: AuthViewModel
   
-    var body: some View {
-      VStack {
-        //image
-        Image("Login_logo")
-          .resizable()
-          .scaledToFill()
-          .frame(width: 120, height: 120)
-          .padding(.vertical, 32)
+  var body: some View {
+    VStack {
+      //image
+      Image("Login_logo")
+        .resizable()
+        .scaledToFill()
+        .frame(width: 120, height: 120)
+        .padding(.vertical, 32)
+      
+      VStack (spacing: 24){
+        InputView(text: $email,
+                  title: LocalizedStringKey("signup.page.email.title"),
+                  placeholder: LocalizedStringKey("signup.page.email.placeholder"))
+        .autocapitalization(.none)
         
-        VStack (spacing: 24){
-          InputView(text: $email,
-                    title: "signup.page.email.title".localize(),
-                    placeholder: "signup.page.email.placeholder".localize())
-            .autocapitalization(.none)
-          
-          InputView(text: $fullname,
-                    title: "signup.page.fullname.title".localize(),
-                    placeholder: "signup.page.fullname.placeholder".localize())
-          
-          InputView(text: $password,
-                    title: "signup.page.password.title".localize(),
-                    placeholder: "signup.page.pasword.placeholder".localize(),
+        InputView(text: $fullname,
+                  title: LocalizedStringKey("signup.page.fullname.title"),
+                  placeholder: LocalizedStringKey("signup.page.fullname.placeholder"))
+        
+        InputView(text: $password,
+                  title: LocalizedStringKey("signup.page.password.title"),
+                  placeholder: LocalizedStringKey("signup.page.pasword.placeholder"),
+                  isSecureField: true)
+        .autocapitalization(.none)
+        
+        ZStack (alignment: .trailing){
+          InputView(text: $confirmpassword,
+                    title: LocalizedStringKey("signup.page.confirmpassword.title"),
+                    placeholder: LocalizedStringKey("signup.page.confirmpassword.placeholder"),
                     isSecureField: true)
-            .autocapitalization(.none)
-          
-          ZStack (alignment: .trailing){
-            InputView(text: $confirmpassword,
-                      title: "signup.page.confirmpassword.title".localize(),
-                      placeholder: "signup.page.confirmpassword.placeholder".localize(),
-                      isSecureField: true)
-              .autocapitalization(.none)
-            if !password.isEmpty && !confirmpassword.isEmpty {
-              if password == confirmpassword {
-                Image(systemName: "checkmark.circle.fill")
-                  .imageScale(.large)
-                  .fontWeight(.bold)
-                  .foregroundColor(Color(.systemGreen))
-              } else {
-                Image(systemName: "xmark.circle.fill")
-                  .imageScale(.large)
-                  .fontWeight(.bold)
-                  .foregroundColor(Color(.systemRed))
-              }
+          .autocapitalization(.none)
+          if !password.isEmpty && !confirmpassword.isEmpty {
+            if password == confirmpassword {
+              Image(systemName: "checkmark.circle.fill")
+                .imageScale(.large)
+                .fontWeight(.bold)
+                .foregroundColor(Color(.systemGreen))
+            } else {
+              Image(systemName: "xmark.circle.fill")
+                .imageScale(.large)
+                .fontWeight(.bold)
+                .foregroundColor(Color(.systemRed))
             }
           }
         }
-        .padding(.horizontal)
-        .padding(.top, 12)
-        
-        // Sign up Button
-        Button {
-          Task {
-            try await viewModel.createUser(withEmail: email, password: password, fullname: fullname)
-          }
-        } label: {
-          HStack {
-            Text("signup.page.signin.button".localize())
-              .fontWeight(.semibold)
-            Image(systemName: "arrow.right")
-          }
-          .foregroundColor(.white)
-          .frame(width: UIScreen.main.bounds.width - 32, height: 48)
+      }
+      .padding(.horizontal)
+      .padding(.top, 12)
+      
+      // Sign up Button
+      Button {
+        Task {
+          try await viewModel.createUser(withEmail: email, password: password, fullname: fullname)
         }
-        .background(Color(.systemBlue).cornerRadius(10))
-        .disabled(!formIsValid)
-        .opacity(formIsValid ? 1 : 0.5)
-        .padding(.top, 24)
-        
-        Spacer()
-        
-        // Return to Sign In page
-        Button {
-          dismiss()
-        } label: {
-          HStack (spacing: 3){
-            Text("signup.page.signup.button.text1".localize())
-            Text("signup.page.signup.button.text2".localize())
-              .fontWeight(.bold)
-          }
-          .font(.system(size: 14))
+      } label: {
+        HStack {
+          Text(LocalizedStringKey("signup.page.signin.button"))
+            .fontWeight(.semibold)
+          Image(systemName: "arrow.right")
         }
-
+        .foregroundColor(.white)
+        .frame(width: UIScreen.main.bounds.width - 32, height: 48)
+      }
+      .background(Color(.systemBlue).cornerRadius(10))
+      .disabled(!formIsValid)
+      .opacity(formIsValid ? 1 : 0.5)
+      .padding(.top, 24)
+      
+      Spacer()
+      
+      // Return to Sign In page
+      Button {
+        dismiss()
+      } label: {
+        HStack (spacing: 3){
+          Text(LocalizedStringKey("signup.page.signup.button.text1"))
+          Text(LocalizedStringKey("signup.page.signup.button.text2"))
+            .fontWeight(.bold)
+        }
+        .font(.system(size: 14))
       }
     }
+  }
 }
 
 // MARK: - AuthentificationFormProtocol

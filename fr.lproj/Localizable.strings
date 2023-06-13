@@ -11,7 +11,7 @@
 
 // MARK: - SingIn Page
 "signin.page.email.title" = "Adresse Email";
-"signin.page.email.placeholder" = "nom@exemple.com";
+"signin.page.email.placeholder" = "Entrez votre adresse mail";
 "signin.page.password.title" = "Mot de pass";
 "signin.page.pasword.placeholder" = "Entrez votre mot de pass";
 "signin.page.signin.button" = "Se Connecter";
@@ -20,7 +20,7 @@
 
 // MARK: - SingUp Page
 "signup.page.email.title" = "Adresse Email";
-"signup.page.email.placeholder" = "nom@exemple.com";
+"signup.page.email.placeholder" = "Entrez votre adresse mail";
 "signup.page.fullname.title" = "Nom Complet";
 "signup.page.fullname.placeholder" = "Entrez votre nom";
 "signup.page.password.title" = "Mot de pass";
@@ -37,4 +37,16 @@
 "profile.page.general.language" = "Langage";
 "profile.page.account.section.title" = "Compte";
 "profile.page.account.signout" = "Se Déconnecter";
-"profile.page.account.deleteaccount" = "Supprimer le Compte";
+"profile.page.account.signout.alert.title" = "Confirmation";
+"profile.page.account.signout.alert.message" = "Voulez-vous vraiment vous déconnecter ?";
+"profile.page.account.signout.alert.primaryButton" = "Se déconnecter";
+"profile.page.account.signout.alert.secondaryButton" = "Annuler";
+"profile.page.account.deleteaccount" = "Supprimer votre compte";
+"profile.page.account.deleteaccount.alert.title" = "Confirmation";
+"profile.page.account.deleteaccount.alert.message" = "Voulez-vous vraiment supprimer votre compte?";
+"profile.page.account.deleteaccount.alert.primaryButton" = "Supprimer votre compte";
+"profile.page.account.deleteaccount.alert.secondaryButton" = "Annuler";
+"profile.page.account.reauthentification.alert.title" = "Confirmation";
+"profile.page.account.reauthentification.alert.message" = "La suppression de votre compte nécessite une réauthentification.";
+"profile.page.account.reauthentification.alert.primaryButton" = "Se réauthentifier";
+"profile.page.account.reauthentification.alert.secondaryButton" = "Annuler";

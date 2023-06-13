@@ -10,7 +10,7 @@ import SwiftUI
 struct ChatView: View {
     var body: some View {
         VStack {
-            Text("chats.page.title")
+            Text(LocalizedStringKey("chats.page.title"))
         }
     }
 }
